@@ -1,4 +1,4 @@
-# develc.github.io
+# [develc](https://github.com/develc)
 
 Some projects:
 
