@@ -1,23 +1,116 @@
 <!DOCTYPE html>
+
 <html lang="en">
 	<head>
-		<title>ciao1092</title>
-		<meta name="viewport" content="width=device-width,initial-scale=1" />
-		<link href="style.css" rel="stylesheet" />
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<title>Home</title>
+		<script src="Resources/viewsEngine.js" type="text/javascript" defer></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+			crossorigin="anonymous"
+			defer
+		></script>
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+			crossorigin="anonymous"
+		/>
+
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css"
+		/>
+		<style>
+			.backdrop-blur {
+				-webkit-backdrop-filter: blur(10px);
+				backdrop-filter: blur(10px);
+				background-color: #00000088;
+			}
+
+			.btn-mastodon,
+			.btn-mastodon:visited {
+				background-color: #6364ff !important;
+				color: #ffffff !important;
+			}
+
+			.btn-mastodon:active,
+			.btn-mastodon:hover {
+				background-color: #563acc !important;
+				color: #ffffff !important;
+			}
+
+			.btn-mastodon:focus {
+				background-color: #563acc !important;
+				color: #ffffff !important;
+				box-shadow: var(--bs-focus-ring-x, 0) var(--bs-focus-ring-y, 0) var(--bs-focus-ring-blur, 0)
+					var(--bs-focus-ring-width) #563acc88;
+			}
+
+			.btn-twitter,
+			.btn-twitter:visited {
+				background-color: #1d9bf0 !important;
+				color: #ffffff !important;
+			}
+
+			.btn-twitter:active,
+			.btn-twitter:hover {
+				background-color: #000000 !important;
+				color: #ffffff !important;
+			}
+
+			.btn-twitter:focus {
+				background-color: #000000 !important;
+				color: #ffffff !important;
+				box-shadow: var(--bs-focus-ring-x, 0) var(--bs-focus-ring-y, 0) var(--bs-focus-ring-blur, 0)
+					var(--bs-focus-ring-width) #00000088;
+			}
+
+			.btn-instagram,
+			.btn-instagram:visited {
+				background-color: #ff005a !important;
+				color: #ffffff !important;
+			}
+
+			.btn-instagram:active,
+			.btn-instagram:hover {
+				background-color: #ec2c70 !important;
+				color: #ffffff !important;
+			}
+
+			.btn-instagram:focus {
+				background-color: #ec2c70 !important;
+				color: #ffffff !important;
+				box-shadow: var(--bs-focus-ring-x, 0) var(--bs-focus-ring-y, 0) var(--bs-focus-ring-blur, 0)
+					var(--bs-focus-ring-width) #ec2c7088;
+			}
+
+			.btn-github,
+			.btn-github:visited {
+				background-color: #22272e !important;
+				color: #ffffff !important;
+			}
+
+			.btn-github:active,
+			.btn-github:hover {
+				background-color: #2d333b !important;
+				color: #ffffff !important;
+			}
+
+			.btn-github:focus {
+				background-color: #2d333b !important;
+				color: #ffffff !important;
+				box-shadow: var(--bs-focus-ring-x, 0) var(--bs-focus-ring-y, 0) var(--bs-focus-ring-blur, 0)
+					var(--bs-focus-ring-width) #2d333b88;
+			}
+		</style>
 	</head>
 	<body>
-		<h1>
-			<a href="https://github.com/ciao1092" target="_blank">ciao1092</a>
-		</h1>
-		<hr />
-		<h4>Some projects:</h4>
-		<p>
-			<a href="https://github.com/ciao1092/IELauncher" target="_blank">Internet Explorer Launcher</a>
-			- a way to launch Internet Explorer on Windows 11 (Read the <a href="IELauncher" target="_blank">docs</a>)
-		</p>
-		<p>
-			<a href="https://github.com/ciao1092/uefi-html" target="_blank">UEFI HTML</a>
-			- a simulation of a HP UEFI (view <a href="uefi-html" target="_blank">deployment</a>)
-		</p>
+		<div id="indexAndDocContent">
+			<div id="index"></div>
+			<div id="docContent">Loading...</div>
+		</div>
 	</body>
 </html>
