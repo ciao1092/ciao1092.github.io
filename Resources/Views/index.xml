@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <views>
 	<view default="true">
-		<title>Home</title>
+		<display>Home</display>
 		<name>home</name>
 	</view>
 	<view>
-		<title>About</title>
+		<display>About me</display>
 		<name>about</name>
 	</view>
 </views>

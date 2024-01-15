@@ -1,119 +1,163 @@
 <!DOCTYPE html>
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<title>Home</title>
-		<script src="Resources/viewsEngine.js" type="text/javascript" defer></script>
-		<script
-			src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-			integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-			crossorigin="anonymous"
-			defer
-		></script>
-		<link
-			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-			rel="stylesheet"
-			integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
-			crossorigin="anonymous"
-		/>
+<html lang="en" class="h-100">
 
-		<link
-			rel="stylesheet"
-			href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css"
-		/>
-		<style>
-			.backdrop-blur {
-				-webkit-backdrop-filter: blur(10px);
-				backdrop-filter: blur(10px);
-				background-color: #00000088;
+<head>
+	<title>Loading...</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<script src="Resources/viewsEngine.js" type="text/javascript" defer></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous" defer></script>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css" />
+	<style>
+		.backdrop-blur {
+			-webkit-backdrop-filter: blur(10px);
+			backdrop-filter: blur(10px);
+			background-color: #00000088;
+		}
+
+		.btn-mastodon,
+		.btn-mastodon:visited {
+			background-color: #6364ff !important;
+			color: #ffffff !important;
+		}
+
+		.btn-mastodon:active,
+		.btn-mastodon:hover {
+			background-color: #563acc !important;
+			color: #ffffff !important;
+		}
+
+		.btn-mastodon:focus {
+			background-color: #563acc !important;
+			color: #ffffff !important;
+			box-shadow: var(--bs-focus-ring-x, 0) var(--bs-focus-ring-y, 0) var(--bs-focus-ring-blur, 0) var(--bs-focus-ring-width) #563acc88;
+		}
+
+		.btn-twitter,
+		.btn-twitter:visited {
+			background-color: #1d9bf0 !important;
+			color: #ffffff !important;
+		}
+
+		.btn-twitter:active,
+		.btn-twitter:hover {
+			background-color: #000000 !important;
+			color: #ffffff !important;
+		}
+
+		.btn-twitter:focus {
+			background-color: #000000 !important;
+			color: #ffffff !important;
+			box-shadow: var(--bs-focus-ring-x, 0) var(--bs-focus-ring-y, 0) var(--bs-focus-ring-blur, 0) var(--bs-focus-ring-width) #00000088;
+		}
+
+		.btn-instagram,
+		.btn-instagram:visited {
+			background-color: #ff005a !important;
+			color: #ffffff !important;
+		}
+
+		.btn-instagram:active,
+		.btn-instagram:hover {
+			background-color: #ec2c70 !important;
+			color: #ffffff !important;
+		}
+
+		.btn-instagram:focus {
+			background-color: #ec2c70 !important;
+			color: #ffffff !important;
+			box-shadow: var(--bs-focus-ring-x, 0) var(--bs-focus-ring-y, 0) var(--bs-focus-ring-blur, 0) var(--bs-focus-ring-width) #ec2c7088;
+		}
+
+		.btn-github,
+		.btn-github:visited {
+			background-color: #22272e !important;
+			color: #ffffff !important;
+		}
+
+		.btn-github:active,
+		.btn-github:hover {
+			background-color: #2d333b !important;
+			color: #ffffff !important;
+		}
+
+		.btn-github:focus {
+			background-color: #2d333b !important;
+			color: #ffffff !important;
+			box-shadow: var(--bs-focus-ring-x, 0) var(--bs-focus-ring-y, 0) var(--bs-focus-ring-blur, 0) var(--bs-focus-ring-width) #2d333b88;
+		}
+
+		html,
+		body {
+			overflow-x: hidden;
+			/* Prevent scroll on narrow devices */
+		}
+
+		@media (max-width: 991.98px) {
+			.offcanvas-collapse {
+				position: fixed;
+				top: 56px;
+				/* Height of navbar */
+				bottom: 0;
+				left: 100%;
+				width: 100%;
+				padding-right: 1rem;
+				padding-left: 1rem;
+				overflow-y: auto;
+				visibility: hidden;
+				background-color: #343a40;
+				transition: transform .3s ease-in-out, visibility .3s ease-in-out;
 			}
 
-			.btn-mastodon,
-			.btn-mastodon:visited {
-				background-color: #6364ff !important;
-				color: #ffffff !important;
+			.offcanvas-collapse.open {
+				visibility: visible;
+				transform: translateX(-100%);
 			}
+		}
 
-			.btn-mastodon:active,
-			.btn-mastodon:hover {
-				background-color: #563acc !important;
-				color: #ffffff !important;
-			}
+		.nav-scroller .nav {
+			color: rgba(255, 255, 255, .75);
+		}
 
-			.btn-mastodon:focus {
-				background-color: #563acc !important;
-				color: #ffffff !important;
-				box-shadow: var(--bs-focus-ring-x, 0) var(--bs-focus-ring-y, 0) var(--bs-focus-ring-blur, 0)
-					var(--bs-focus-ring-width) #563acc88;
-			}
+		.nav-scroller .nav-link {
+			padding-top: .75rem;
+			padding-bottom: .75rem;
+			font-size: .875rem;
+			color: #6c757d;
+		}
 
-			.btn-twitter,
-			.btn-twitter:visited {
-				background-color: #1d9bf0 !important;
-				color: #ffffff !important;
-			}
+		.nav-scroller .nav-link:hover {
+			color: #007bff;
+		}
 
-			.btn-twitter:active,
-			.btn-twitter:hover {
-				background-color: #000000 !important;
-				color: #ffffff !important;
-			}
+		.nav-scroller .active {
+			font-weight: 500;
+			color: #343a40;
+		}
 
-			.btn-twitter:focus {
-				background-color: #000000 !important;
-				color: #ffffff !important;
-				box-shadow: var(--bs-focus-ring-x, 0) var(--bs-focus-ring-y, 0) var(--bs-focus-ring-blur, 0)
-					var(--bs-focus-ring-width) #00000088;
-			}
+		.bg-purple {
+			background-color: #6f42c1;
+		}
+	</style>
 
-			.btn-instagram,
-			.btn-instagram:visited {
-				background-color: #ff005a !important;
-				color: #ffffff !important;
-			}
+	<link rel="me" href="https://mastodon.social/@ciao1092" />
+	<link rel="me" href="https://mastodon.galileivr.org/@admin" />
+</head>
 
-			.btn-instagram:active,
-			.btn-instagram:hover {
-				background-color: #ec2c70 !important;
-				color: #ffffff !important;
-			}
-
-			.btn-instagram:focus {
-				background-color: #ec2c70 !important;
-				color: #ffffff !important;
-				box-shadow: var(--bs-focus-ring-x, 0) var(--bs-focus-ring-y, 0) var(--bs-focus-ring-blur, 0)
-					var(--bs-focus-ring-width) #ec2c7088;
-			}
-
-			.btn-github,
-			.btn-github:visited {
-				background-color: #22272e !important;
-				color: #ffffff !important;
-			}
-
-			.btn-github:active,
-			.btn-github:hover {
-				background-color: #2d333b !important;
-				color: #ffffff !important;
-			}
-
-			.btn-github:focus {
-				background-color: #2d333b !important;
-				color: #ffffff !important;
-				box-shadow: var(--bs-focus-ring-x, 0) var(--bs-focus-ring-y, 0) var(--bs-focus-ring-blur, 0)
-					var(--bs-focus-ring-width) #2d333b88;
-			}
-		</style>
-
-		<link rel="me" href="https://mastodon.social/@ciao1092" />
-		<link rel="me" href="https://mastodon.galileivr.org/@admin" />
-	</head>
-	<body>
-		<div id="indexAndDocContent">
-			<div id="index"></div>
-			<div id="docContent">Loading...</div>
+<body class="h-100">
+	<div id="indexAndDocContent" class="h-100">
+		<div id="index"></div>
+		<div id="docContent" class="h-100">
+			<div class="h-100 d-flex align-items-center justify-content-center p-2 bg-body-tertiary" data-bs-theme="dark">
+				<div class="spinner-border text-light" role="status">
+					<span class="visually-hidden">Loading...</span>
+				</div>
+			</div>
 		</div>
-	</body>
+	</div>
+</body>
+
 </html>
