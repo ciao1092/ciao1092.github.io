@@ -1,0 +1,16 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/activitystreams",
+    "https://w3id.org/security/v1"
+  ],
+  "id": "https://ciao1092.github.io/actor.json",
+  "type": "Person",
+  "preferredUsername": "ciao1092",
+  "inbox": "https://ciao1092.github.io/inbox",
+  "outbox": "https://ciao1092.github.io/outbox.json",
+  "publicKey": {
+    "id": "https://ciao1092.github.io/actor.json#main-key",
+    "owner": "https://ciao1092.github.io/actor.json",
+    "publicKeyPem": "-----BEGIN PUBLIC KEY-----MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAwHUCBq6Uc/Le6M5yxdtCd4dedxIi48r/+0sTOJXH3RQmddKQw3OQoo7bQIqiVyoYWnzw5ASPFQWhDsV+EQ1q3bhbio0tYm7DkUL/R5g39Bb2mCJfEbO65jKIZaBK/GkyInGmogLU4Qc+2QdMr3wo//Jmh5Sg3iHsGColyH4gk5qb6goc8cgOzl3y93HafpHwVEJDVULHF07eodn5kNIuDuzxe/bBGCNOO/2M1YUfTTY5up5JNgf9E6sWXaZn9n+WyHmcsaC0CXpfFyD0exkukdOELyrSYjoLjwRGWJ8IdsXCqWUDjkk9B1QDxHBVPL5L98dCwSi6YWZf0gohfpTFDwIDAQAB-----END PUBLIC KEY-----"
+  }
+}
